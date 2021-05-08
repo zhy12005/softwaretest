@@ -47,5 +47,11 @@ pipeline {
                 bat 'mvn clean'
             }
         }
+        stage('Deliver'){
+            steps{
+                sh 'chmod 777 ./jenkins/scripts/deliver.sh'
+                sh './jerkins/scripts/deliver.sh'
+            }
+        }
     }
 }
